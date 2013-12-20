@@ -1,5 +1,21 @@
 <?php
 return array(
+    'console' => array(
+        'router' => array(
+            'routes' => array(
+                'zf2-email' => array(
+                    'options' => array(
+                        'route'    => 'zf2-email [--action|-a]',
+                        'defaults' => array(
+                            'controller' => 'ZF2Email\Controller\Index',
+                            'action'     => 'index'
+                        )
+                    )
+                )
+            )
+        )
+    ),
+    
     'di' => array(
         'instance' => array(
             'Email\Email' => array(
