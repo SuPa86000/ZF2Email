@@ -1,6 +1,7 @@
 {
     "name": "supa86000/zf2-email",
     "description": "ZF2Email send email with templates and layouts.",
+    "version": "1.0.1-dev",
     "authors": [
         {
             "name": "SuPaCreation.com",
