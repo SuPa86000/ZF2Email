@@ -12,6 +12,9 @@
         
     },
     "autoload": {
-        "psr-0": { "ZF2Email": "/" }
+        "psr-0": {
+            "ZF2Email": "src"
+        },
+        "classmap": ["Module.php"]
     }
 }
