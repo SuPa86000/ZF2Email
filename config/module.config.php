@@ -5,10 +5,10 @@ return array(
             'routes' => array(
                 'zf2-email' => array(
                     'options' => array(
-                        'route'    => 'zf2-email [--action|-a]',
+                        'route'    => 'zf2-email setup',
                         'defaults' => array(
                             'controller' => 'ZF2Email\Controller\Index',
-                            'action'     => 'index'
+                            'action'     => 'setup'
                         )
                     )
                 )
@@ -21,7 +21,7 @@ return array(
             'Email\Email' => array(
                 'parameters' => array(
                     'viewsDir'  => array(
-                        dirname(__DIR__) . '/view/html-email/example'
+                        dirname(__DIR__) . '/view/emails/example'
                     ),
                     'transport'         => 'email-transport',
                     'message'           => 'email-message',
