@@ -1,0 +1,42 @@
+<?php
+return array(
+    'di' => array(
+        'instance' => array(
+            'Email\Email' => array(
+                'parameters' => array(
+                    'viewsDir'  => array(
+                        dirname(__DIR__) . '/view/html-email/example'
+                    ),
+                    'transport'         => 'email-transport',
+                    'message'           => 'email-message',
+                    'templateRenderer'  => 'email-renderer',
+                    'template'          => 'example'
+                )
+            ),
+            'Zend\Mail\Transport\Smtp' => array(
+                'parameters' => array(
+                    'options' => 'email-smtp-options'
+                )
+            ),
+            'Zend\Mail\Transport\SmtpOptions' => array(
+                'parameters' => array(
+                    'name' => '', // host here
+                    'host' => '', // host here
+                    'connectionClass' => 'login',
+                    'connectionConfig' => array(
+                        'username' => 'username@domain',
+                        'password' => '********'
+                    )
+                )
+            ),
+            'aliases' => array(
+                'email'                 => 'Email\Email',
+                'email-factory'         => 'Email\EmailFactory',
+                'email-transport'       => 'Zend\Mail\Transport\Smtp',
+                'email-message'         => 'Zend\Mail\Message',
+                'email-smtp-options'    => 'Zend\Mail\Transport\SmtpOptions',
+                'email-renderer'        => 'Zend\View\Renderer\PhpRenderer'
+            )
+        ),
+    )
+);
