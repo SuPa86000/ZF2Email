@@ -1,8 +1,7 @@
 <?php
 namespace ZF2Email;
 
-use Zend\Di\ServiceLocatorInterface as ServiceLocator,
-    Zend\Di\Di,
+use Zend\Di\Di,
     Zend\ServiceManager\ServiceLocatorAwareInterface,
     Zend\ServiceManager\ServiceLocatorInterface,
     ZF2Email\Exception\BadMethodCallException,

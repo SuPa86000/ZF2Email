@@ -196,7 +196,7 @@ class Email
         $headers->addHeaderLine('Content-Transfer-Encoding', '8bit');
         $headers->addHeaderLine('Content-Type', 'text/html; charset=UTF-8');
         
-        $subject = mb_encode_mimeheader(utf8_decode($this->message->getSubject();), "UTF-8");
+        $subject = mb_encode_mimeheader(utf8_decode($this->message->getSubject()), "UTF-8");
         
         $this->message->setSubject($subject);
         
